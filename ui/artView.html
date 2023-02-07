@@ -1,0 +1,31 @@
+<h2>Current Art Collection:</h2>
+
+<form action="{{ @BASE }}/collection" method="post">
+	<input type="submit" name="submit" value="Filter:">
+	<select name="field">
+		<option value="name">name</option>
+		<option value="artist">artist</option>
+		<option value="MBTI">MBTI</option>
+		<option value="type">type</option>
+	</select> 
+	with 
+	<input type="text" name="term">
+</form>
+
+<table>
+	<tr>
+		<th>Name</th><th>Art</th><th>Artist</th><th>MBTI</th><th>type</th>
+	</tr>
+	<repeat group="{{ @dbData }}" value="{{ @record }}">
+		<tr>
+			<td>{{ trim(@record.name) }}</td>
+			<td><img src="img/{{ trim(@record.file) }}" alt="HTML5 Icon" style="width:128px;height:128px;"></td>
+			<td>{{ trim(@record.artist) }}</td>
+			<td>{{ trim(@record.MBTI) }}</td>
+			<td>{{ trim(@record.type) }}</td>
+		</tr>
+	</repeat>
+</table>
+
+<!--<p><a href="{{ @BASE }}/simpleform">Add another record</a></p>
+<p><a href="{{ @BASE }}/editView">Delete records</a></p>-->

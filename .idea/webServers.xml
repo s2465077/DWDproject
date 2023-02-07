@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b47f10d0-9d02-47c0-8a86-910596feab4e" name="dpoon.edinburgh.domains (project level)" url="http://dpoon.edinburgh.domains">
+        <fileTransfer rootFolder="/home/dpoonedi" accessType="SFTP" host="dpoon.edinburgh.domains" port="22" sshConfigId="3d3c4226-0358-4375-ad67-7804359a23aa" sshConfig="dpoonedi@dpoon.edinburgh.domains:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

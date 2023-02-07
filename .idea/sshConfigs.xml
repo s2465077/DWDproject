@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="dpoon.edinburgh.domains" id="3d3c4226-0358-4375-ad67-7804359a23aa" port="22" nameFormat="DESCRIPTIVE" username="dpoonedi" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>
