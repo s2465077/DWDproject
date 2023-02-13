@@ -204,6 +204,12 @@ body {
 }
 
 /* TEXT */
+h1 {
+    font-size: 36px;
+    color: #f2f2f2;
+    font-weight: 700;
+}
+
 h2 {
     font-size: 32px;
     color: #f2f2f2;
@@ -238,6 +244,27 @@ p {
     color: #FF8A9F;
 }
 
+.tag {
+    /* margin-top: 10px; */
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #f2f2f2;
+    font-family: 'Aldrich';
+    text-transform: uppercase;
+    font-size: 8px;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+    /* box-shadow: 0 0 10px #f2f2f2; */
+    border-radius: 30px;
+    border: 1px solid #4d4d4d;
+    background-color: transparent;
+}
+
 /* ETC */
 #museum-logo {
     width: 80%;
@@ -266,9 +293,10 @@ p {
     font-family: 'Aldrich';
     text-transform: uppercase;
     font-size: 14px;
-    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
     /* box-shadow: 0 0 10px #f2f2f2; */
     border-radius: 30px;
+    border: none;
     background-image: linear-gradient(to right, #4d4d4d 0%, #393939 51%, #232323 100%);
 }
 
@@ -278,6 +306,169 @@ p {
     text-decoration: none;
     color: #FF8A9F;
 }
+
+/* FORM */
+select {
+    border: 1px solid;
+    border-color: #FF8A9F;
+    border-radius: 15px;
+    padding: 15px;
+    color: #f2f2f2;
+    background-color: transparent;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#form1 a {
+    text-decoration: underline;
+    font-weight: 500;
+    color: #FF8A9F;
+}
+
+#form1 a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+    color: #FF8A9F;
+}
+
+.textbox {
+    border: 1px solid;
+    border-color: #FF8A9F;
+    /* outline-color: #FF8A9F; */
+    border-radius: 15px;
+    padding: 15px;
+    color: #f2f2f2;
+    background-color: transparent;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.label-question {
+    margin-top: 10px;
+    /* display: inline-block; */
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #f2f2f2;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    /* box-shadow: 0 0 10px #f2f2f2; */
+    border-radius: 30px;
+    background-color: #FF8A9F;
+}
+
+/* RADIO BUTTON */
+/* Reference : https://stackoverflow.com/questions/16242980/making-radio-buttons-look-like-buttons-instead */
+.questionnaire-radio {
+    
+}
+
+.questionnaire-radio-ul {
+    list-style-type: none;
+    /* margin: 0 0 0 0; */
+    margin-left: -40px;
+}
+
+.questionnaire-radio-ul li {
+    /* float: left; */
+    display: inline-block;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 10%;
+    min-width: 100px;
+    /* height: 15px; */
+    position: relative;
+}
+
+.questionnaire-radio-ul label,
+.questionnaire-radio-ul input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 20;
+}
+
+.questionnaire-radio-ul input[type="radio"] {
+    opacity: 0.01;
+    z-index: 100;
+}
+
+.questionnaire-radio-ul input[type="radio"]:checked+label,
+.Checked+label {
+    background: #FF8A9F;
+}
+
+.questionnaire-radio-ul label {
+    padding: 20px;
+    border: 1px solid #f2f2f2;
+    color: #f2f2f2;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 90;
+
+    font-size: 14px;
+}
+
+.questionnaire-radio-ullabel:hover {
+    background: #DDD;
+}
+
+/* SLIDER
+Source : https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+.slider {
+    -webkit-appearance: none;
+    width: 70%;
+    height: 8px;
+    border-radius: 5px;
+    /* background-image: linear-gradient(to right, #232323 0%, #4d4d4d 51%, #232323 100%); */
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0.5, #FF8A9F),
+        color-stop(0.5, #393939));
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: linear-gradient(to left, #FF8A9F 0%, #A9848A 100%);
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FF8A9F;
+    cursor: pointer;
+  }
+
+.slider::-moz-range-progress {
+    background: red;
+}
+
 
 /* ============================= */
 /* ==== SCREEN MEDIA NAVBAR ==== */
