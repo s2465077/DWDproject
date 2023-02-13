@@ -22,23 +22,22 @@
          <span class="navbar-toggler-icon"></span>
       </button>
 
-
       <div class="collapse navbar-collapse topnav" id="navbarTogglerDemo02">
          <ul class="navbar-nav">
-            <li class="active" id="navbar-home">
-               <a href="#home" class="navbar-item">
+            <li id="navbar-home">
+               <a href="{{ @BASE }}/" class="navbar-item">
                   <img src="../img/00.Navbar/Navbar-Active.png" class="img-selected">
                   Home
                </a>
             </li>
             <li id="navbar-quiz">
-               <a href="#quiz" class="navbar-item">
+               <a href="{{ @BASE }}/quiz" class="navbar-item">
                   <img src="../img/00.Navbar/Navbar-Active.png" class="img-selected">
                   Quiz
                </a>
             </li>
             <li id="li-logo">
-               <a href="#" id="a-logo">
+               <a href="{{ @BASE }}/" id="a-logo">
                   <img src="../img/00.Navbar/Logo.png" class="navbar-logo">
                </a>
             </li>
@@ -74,7 +73,7 @@
          </p>
          <ul class="footer-ul">
             <li id="footer-home">
-               <a href="#home" class="footer-item">Home</a>
+               <a href="{{ @BASE }}/" class="footer-item">Home</a>
             </li>
             <li id="footer-quiz">
                <a href="{{ @BASE }}/quiz" class="footer-item">Quiz</a>
@@ -103,23 +102,56 @@
 
    <script>
       // Add "active" to selected
-      const elm = document.querySelector('ul');
-      elm.addEventListener('click', (el) => {
-         const elActive = elm.querySelector('.active');
-         if (elActive) {
-            elActive.removeAttribute('class');
-            el.target.parentElement.setAttribute('class', 'active');
+      // const elm = document.querySelector('ul');
+      // elm.addEventListener('click', (el) => {
+      //    const elActive = elm.querySelector('.active');
+      //    if (elActive) {
+      //       elActive.removeAttribute('class');
+      //       el.target.parentElement.setAttribute('class', 'active');
 
-            if ($("#li-logo").hasClass("active")) {
-               $("#li-logo").removeClass("active");
-               $("#navbar-home").addClass("active");
-            }
-            if ($("#a-logo").hasClass("active")) {
-               $("#a-logo").removeClass("active");
-               $("#navbar-home").addClass("active");
-            }
-         }
-      })
+      //       if ($("#li-logo").hasClass("active")) {
+      //          $("#li-logo").removeClass("active");
+      //          $("#navbar-home").addClass("active");
+      //       }
+      //       if ($("#a-logo").hasClass("active")) {
+      //          $("#a-logo").removeClass("active");
+      //          $("#navbar-home").addClass("active");
+      //       }
+      //    }
+      // })
+
+      const elm = document.querySelector('ul');
+      const elActive = elm.querySelector('.active');
+      Header
+      $("#navbar-home").click(function () {
+         const elActive = elm.querySelector('.active');
+         elActive.removeAttribute('class');
+         $("#navbar-home").addClass("active");
+      });
+
+      $("#navbar-quiz").click(function () {
+         const elActive = elm.querySelector('.active');
+         elActive.removeAttribute('class');
+         $("#navbar-quiz").addClass("active");
+      });
+
+      $("#navbar-logo").click(function () {
+         const elActive = elm.querySelector('.active');
+         elActive.removeAttribute('class');
+         $("#navbar-home").addClass("active");
+      });
+
+      $("#navbar-collection").click(function () {
+         const elActive = elm.querySelector('.active');
+         elActive.removeAttribute('class');
+         $("#navbar-collection").addClass("active");
+      });
+
+      $("#navbar-about").click(function () {
+         const elActive = elm.querySelector('.active');
+         elActive.removeAttribute('class');
+         $("#navbar-about").addClass("active");
+      });
 
       // Footer
       $("#footer-home").click(function () {
@@ -145,6 +177,24 @@
          elActive.removeAttribute('class');
          $("#navbar-about").addClass("active");
       });
+
+      // Check Header
+      var path = window.location.pathname;
+      var page = path.split("/").pop();
+      // alert(page);
+
+      if((page=="quiz")||(page=="quizForm.html")) {
+         $("#navbar-quiz").addClass("active");
+      }
+      else if((page=="collection")||(page=="artView.html")) {
+         $("#navbar-collection").addClass("active");
+      }
+      else if((page=="aboutUs")||(page=="aboutUs.html")){
+         $("#navbar-about").addClass("active");
+      }
+      else if ((page=="")||("home.html")){
+         $("#navbar-home").addClass("active");
+      }
    </script>
 
 </body>
