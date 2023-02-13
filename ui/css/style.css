@@ -1,55 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ============================= */
+/* ====== NAVBAR SECTION ======= */
+/* ============================= */
+
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Montserrat Alternates";
+    background-color: #1E1E1E;
+}
+
+.navheader {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
 }
 
 .topnav {
+    position: relative;
     overflow: hidden;
-    background-color: #333;
+    background-color: #1E1E1E;
+    width: 100%;
+
+    /* border: 1px solid #ccc; */
+    border-width: 1px 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-.topnav a {
-    float: left;
-    display: block;
+.navbar-nav {
+    width: 100%;
+    display: inline;
+}
+
+.navbar-nav li {
+    display: inline;
+    vertical-align: middle;
+}
+
+.navbar-item {
+    /* float: left;
+    display: block; */
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    /* padding: 14px 16px; */
     text-decoration: none;
-    font-size: 17px;
+    font-size: 16px;
+
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    color: #FF8A9F;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-.topnav a.active {
-    background-color: #04AA6D;
-    color: white;
+.active a {
+    /* background-color: #04AA6D; */
+    color: #FF8A9F;
+    font-weight: 700;
 }
 
-.topnav .icon {
-    display: none;
+.active a .img-selected {
+    width: 15px;
+    margin-right: 5px;
 }
 
-@media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-        float: right;
+.img-selected {
+    width: 0px;
+}
+
+.navbar-logo {
+    height: 45px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2px;
+    margin-bottom: -10px;
+}
+
+.navbar-logo:hover {
+    height: 50px;
+}
+
+.navbar-hr {
+    border-color: #f2f2f2;
+    opacity: 20%;
+}
+
+/* ============================= */
+/* ====== FOOTER SECTION ======= */
+/* ============================= */
+.navbar-footer {
+    position: relative;
+    overflow: hidden;
+    background-color: #1E1E1E;
+    width: 100%;
+
+    /* border: 1px solid #ccc; */
+    border-width: 1px 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.footer-ul {
+    width: 100%;
+    display: inline;
+}
+
+.footer-ul li {
+    display: inline;
+    vertical-align: middle;
+}
+
+.footer-item {
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.footer-item:hover {
+    color: #FF8A9F;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* ============================= */
+/* ======= HOME SECTION ======== */
+/* ============================= */
+
+/* COLUMN */
+
+.row {
+    width: 100%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.one-column {
+    float: left;
+    width: 100%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.two-column {
+    float: left;
+    width: 50%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.two-column.left {
+    padding-left: 10%;
+}
+
+.two-column.right {
+    padding-right: 10%;
+}
+
+.three-column {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.center {
+    text-align: center;
+}
+
+.gradient-banner {
+    transition: 0.5s;
+    background-image: linear-gradient(to right, #4d4d4d 0%, #393939 51%, #232323 100%);
+}
+
+/* TEXT */
+h2 {
+    font-size: 32px;
+    color: #f2f2f2;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 32px;
+    color: #FF8A9F;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+h4 {
+    font-size: 16px;
+    color: #f2f2f2;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 14px;
+    color: #f2f2f2;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.pink-text {
+    color: #FF8A9F;
+}
+
+/* ETC */
+#museum-logo {
+    width: 80%;
+    margin-top: -5%px;
+    margin-left: -10%;
+}
+
+.img-icon {
+    width: 35px;
+}
+
+/* BUTTON */
+/* Reference : https://codepen.io/pirrera/pen/bqVeGx */
+.button-style-1 {
+    /* flex: 1 1 auto; */
+    margin-top: 10px;
+    display: inline-block;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #f2f2f2;
+    font-family: 'Aldrich';
+    text-transform: uppercase;
+    font-size: 14px;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    /* box-shadow: 0 0 10px #f2f2f2; */
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #4d4d4d 0%, #393939 51%, #232323 100%);
+}
+
+.button-style-1:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    text-decoration: none;
+    color: #FF8A9F;
+}
+
+/* ============================= */
+/* ==== SCREEN MEDIA NAVBAR ==== */
+/* ============================= */
+
+@media screen and (max-width: 991px) {
+
+    /* NAVBAR */
+    .navheader {
+        min-height: 70px;
+        padding: 0%;
+    }
+
+    .navbar-nav {
+        display: flex;
+    }
+
+    .navbar-logo {
+        display: none;
+    }
+
+    .navbar-toggler {
+        background-color: #1E1E1E;
+        margin-top: 2%;
+        margin-bottom: 0%;
+        margin-right: 2%;
+        margin-left: auto;
+        min-height: 50px;
+    }
+
+    /* FOOTER */
+    .footer-ul {
+        display: inline;
+    }
+
+    .footer-ul li {
         display: block;
+        align-items: center;
     }
-}
 
-@media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
+    /* HOME */
+    .one-column {
+        float: top;
+        width: 100%;
+        text-align: center;
     }
-    .topnav.responsive a {
+
+    .two-column {
         float: none;
-        display: block;
-        text-align: left;
+        width: 100%;
+        padding-left: 4%;
+        padding-right: 4%;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        margin-left: 0px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .two-column.right {
+        padding: 0%;
+    }
+
+    .two-column.left {
+        padding: 0%;
+    }
+
+    .three-column {
+        float: none;
+        width: 33.33%;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* ETC */
+    #museum-logo {
+        width: 70%;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    /* TEXT */
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    /* BUTTON */
+    .button-style-1 {
+        margin-top: 10px;
+        padding-bottom: 15px;
+        padding-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+        font-size: 16px;
+        /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+        /* box-shadow: 0 0 10px #f2f2f2; */
+        border-radius: 30px;
+        background-image: linear-gradient(to right, #4d4d4d 0%, #393939 51%, #232323 100%);
     }
 }
