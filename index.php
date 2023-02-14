@@ -1,6 +1,6 @@
 <?php
 //==============================================================================
-// index.php for SimpleExample app //
+// index.php for Museum Of Soul //
 
 // Create f3 object then set various global properties of it
 // These are available to the routing code below, but also to any
@@ -20,7 +20,7 @@ $f3->set('DB', $db);
 $f3->set('DEBUG',3);		// set maximum debug level
 $f3->set('UI','ui/');		// folder for View templates
 //==============================================================================
-// Simple Example URL application routings
+// Museum Of Soul URL application routings
 
 //home page (index.html) -- actually just shows form entry page with a different title
 $f3->route('GET /',
@@ -32,7 +32,7 @@ $f3->route('GET /',
     }
 );
 //==============================================================================
-// When using GET, provide a form for the user to upload an image via the file input type
+// When using GET, provide a questionnaire for users to retrieve the suitable art collection
 $f3->route('GET /quiz',
     function($f3)
     {
@@ -41,9 +41,59 @@ $f3->route('GET /quiz',
         echo template::instance()->render('layout.html');
     }
 );
+//==============================================================================
+// When using POST (e.g.  form is submitted), invoke the controller (SimpleController and SimpleControllerAjax),
+// which will process the data of quiz, then return art collection based on the user data.
+// We display the art collection via the quizResponse.html
+
+$f3->route('POST /quizForm',
+    function($f3) {
+        $formdata = array();            // array to pass on the entered data in
+        $formdata["name"] = $f3->get('POST.name');            // whatever was called "name" on the form
+        $formdata["MBTI"] = $f3->get('POST.MBTI');          // whatever was called "MBTI" on the form
+        (int)$formdata["ratingQ1"] = $f3->get('POST.ratingQ1');
+        (int)$formdata["ratingQ2"] = $f3->get('POST.ratingQ2');
+        (int)$formdata["ratingQ3"] = $f3->get('POST.ratingQ3');
+        (int)$formdata["ratingQ4"] = $f3->get('POST.ratingQ4');
+        (int)$formdata["ratingQ5"] = $f3->get('POST.ratingQ5');
+        (int)$formdata["ratingQ6"] = $f3->get('POST.ratingQ6');
+        (int)$formdata["ratingQ7"] = $f3->get('POST.ratingQ7');
+        (int)$formdata["ratingQ8"] = $f3->get('POST.ratingQ8');
+        (int)$formdata["ratingQ9"] = $f3->get('POST.ratingQ9');
+        (int)$formdata["ratingQ10"] = $f3->get('POST.ratingQ10');
+        $formdata["questionnaire1"] = $f3->get('POST.questionnaire1');
+        $formdata["questionnaire2"] = $f3->get('POST.questionnaire2');
+        $formdata["questionnaire3"] = $f3->get('POST.questionnaire3');
+        $formdata["questionnaire4"] = $f3->get('POST.questionnaire4');
+
+        $controller = new SimpleController('quizData');
+        $controller->putIntoDatabase($formdata);
+
+        // Total score of the survey is calculated automatically by SQL query at 'quizForm'.
+        // A score rank will be assigned by SQl query to the user.
+
+        // Retrieve the scoreBand of the user from 'quizForm' of database
+        $userData = $controller->getUserTableFromStr($formdata["name"]);
+        $scoreBand = $userData["scoreBand"];
+
+
+        // Retrieve the art collection from 'artCollection' at database, according to the MBTI type and scoreBand of user
+        $controllerAjax = new SimpleControllerAjax;
+        $alldata = $controllerAjax->artSearching('MBTI', $formdata["MBTI"], 'scoreBand',$scoreBand);
+        // Retrieve one art collection randomly for the user
+        shuffle($alldata);
+        $record = $alldata[0];
+
+        $f3->set('formData', $formdata);        // set info in F3 variable for access in response template
+        $f3->set("dbData", [$record]);          // set info in F3 variable for access in filtered data of 'artCollection'
+        $f3->set('html_title', 'Quiz Response');
+        $f3->set('content', 'quizResponse.html');
+        echo template::instance()->render('layout.html');
+    }
+);
 
 //==============================================================================
-// When using GET, provide the art collection for the user
+// When using GET, provide the art collection for the user.
 $f3->route('GET /collection',
     function($f3) {
         $controller = new SimpleControllerAjax;
@@ -57,7 +107,7 @@ $f3->route('GET /collection',
 );
 
 //==============================================================================
-// When using POST, user search the art collection by text
+// When using POST, user search the art collection by text and field, including name, MBTI and artist.
 $f3->route('POST /collection',
     function($f3) {
         $controller = new SimpleControllerAjax;
@@ -78,88 +128,6 @@ $f3->route('GET /aboutUs',
         $f3->set('html_title','This Art Therapy');
         $f3->set('content','aboutUs.html');
         echo template::instance()->render('layout.html');
-    }
-);
-
-//==============================================================================
-// When using POST (e.g.  form is submitted), invoke the controller, which will process
-// any data then return info we want to display. We display
-// the info here via the response.html template
-// route is a function, taking 3 arguments, function($f3) is one of the arguments
-$f3->route('POST /simpleform',
-    function($f3)
-    {
-        $formdata = array();			// array to pass on the entered data in
-        $formdata["name"] = $f3->get('POST.name');			// whatever was called "name" on the form
-        $formdata["colour"] = $f3->get('POST.colour');		// whatever was called "colour" on the form
-        $formdata["pet"] = $f3->get('POST.pet');		// whatever was called "colour" on the form
-        $controller = new SimpleController('simpleModel');
-        $controller->putIntoDatabase($formdata);
-
-        $f3->set('formData',$formdata);		// set info in F3 variable for access in response template
-        $f3->set('html_title','Simple Example Response');
-        $f3->set('content','response.html');
-        echo template::instance()->render('layout.html');
-    }
-);
-//==============================================================================
-$f3->route('GET /dataView',
-    function($f3)
-    {
-        $controller = new SimpleController('simpleModel');
-        $alldata = $controller->getData();
-
-        $f3->set("dbData", $alldata);
-        $f3->set('html_title','Viewing the data');
-        $f3->set('content','dataView.html');
-        echo template::instance()->render('layout.html');
-    }
-);
-//==============================================================================
-$f3->route('GET /editView',				// exactly the same as dataView, apart from the template used
-    function($f3)
-    {
-        $controller = new SimpleController('simpleModel');
-        $alldata = $controller->getData();
-
-        $f3->set("dbData", $alldata);
-        $f3->set('html_title','Viewing the data');
-        $f3->set('content','editView.html');
-        echo template::instance()->render('layout.html');
-    }
-);
-//==============================================================================
-$f3->route('POST /editView',
-    function($f3)
-    {
-        $controller = new SimpleController('simpleModel');
-        $controller->deleteFromDatabase($f3->get('POST.toDelete'));		// in this case, delete selected data record
-        $f3->reroute();
-    }
-);
-
-//==============================================================================
-// When using GET, provide a form for the user to upload an image via the file input type
-$f3->route('GET /avatarCreator',
-    function($f3)
-    {
-        $f3->set('html_title','Avatar Creator');
-        $f3->set('content','avatarCreator.html');
-        echo template::instance()->render('layout.html');
-    }
-);
-
-//==============================================================================
-
-$f3->route('GET /about',
-    function($f3)
-    {
-        $file = F3::instance()->read('README.md');
-        $html = Markdown::instance()->convert($file);
-        $f3->set('html_title', "FFF-SimpleExample");
-        $f3->set('article_html', $html);
-        $f3->set('content','article.html');
-        echo template::instance()->render('layout.html');;
     }
 );
 
