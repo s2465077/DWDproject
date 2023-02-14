@@ -366,7 +366,11 @@ select {
 /* RADIO BUTTON */
 /* Reference : https://stackoverflow.com/questions/16242980/making-radio-buttons-look-like-buttons-instead */
 .questionnaire-radio {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> refs/remotes/origin/main
 }
 
 .questionnaire-radio-ul {
@@ -432,15 +436,24 @@ Source : https://www.w3schools.com/howto/howto_js_rangeslider.asp */
     border-radius: 5px;
     /* background-image: linear-gradient(to right, #232323 0%, #4d4d4d 51%, #232323 100%); */
     background-image: -webkit-gradient(
+<<<<<<< HEAD
             linear,
             left top,
             right top,
             color-stop(0.5, #FF8A9F),
             color-stop(0.5, #393939));
+=======
+        linear,
+        left top,
+        right top,
+        color-stop(0.5, #FF8A9F),
+        color-stop(0.5, #393939));
+>>>>>>> refs/remotes/origin/main
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+<<<<<<< HEAD
 }
 
 .slider:hover {
@@ -448,6 +461,15 @@ Source : https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 }
 
 .slider::-webkit-slider-thumb {
+=======
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+>>>>>>> refs/remotes/origin/main
     -webkit-appearance: none !important;
     appearance: none;
     width: 25px;
@@ -455,15 +477,25 @@ Source : https://www.w3schools.com/howto/howto_js_rangeslider.asp */
     border-radius: 50%;
     background-image: linear-gradient(to left, #FF8A9F 0%, #A9848A 100%);
     cursor: pointer;
+<<<<<<< HEAD
 }
 
 .slider::-moz-range-thumb {
+=======
+  }
+  
+  .slider::-moz-range-thumb {
+>>>>>>> refs/remotes/origin/main
     width: 25px;
     height: 25px;
     border-radius: 50%;
     background: #FF8A9F;
     cursor: pointer;
+<<<<<<< HEAD
 }
+=======
+  }
+>>>>>>> refs/remotes/origin/main
 
 .slider::-moz-range-progress {
     background: red;
@@ -588,9 +620,12 @@ Source : https://www.w3schools.com/howto/howto_js_rangeslider.asp */
         background-image: linear-gradient(to right, #4d4d4d 0%, #393939 51%, #232323 100%);
     }
 }
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> refs/remotes/origin/main
