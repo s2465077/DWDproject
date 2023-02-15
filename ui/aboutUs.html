@@ -2,7 +2,7 @@
 <!--Information about the art therapy and different MBTI types.
 Our team members are introduced. -->
 
-<div class="row gradient-banner" style="margin-top: -16px;">
+<div class="row gradient-banner" style="margin-top: -40px;">
     <div class="one-column">
         <img src="img/01.Home/icon-art.png" class="img-icon">
         <h2>How to do <label class="pink-text">Art Therapy?</label></h2>
@@ -112,7 +112,7 @@ Our team members are introduced. -->
         <h4 style="font-size: 12px;"><i>Source: 16personalities.com</i></h4>
     </div>
     <div class="two-column right">
-        <img src="img/chipmunk.jpg" id="mbti-image" style="width:100%; height:400px; object-fit: cover; margin-top: auto; margin-bottom: auto; vertical-align: baseline;">
+       <img src="../img/MBTI/INTJ.png" id="mbti-image" style="width:100%; height:400px; object-fit: cover; margin-top: auto; margin-bottom: auto; vertical-align: baseline;">
     </div>
 </div>
 
@@ -202,119 +202,119 @@ Our team members are introduced. -->
     });
 
     function mbtichange() {
-        if ($('#MBTI-type option:selected').text() == "INTJ - Architect") {
-            $('#mbti-type').text('INTJ');
-            $('#mbti-title').text('The Logician');
-            $('#mbti-subtitle').text('Imaginative and strategic thinker, with a plan for everything.');
-            $('#mbti-content').text('An Architect (INTJ) is a person with the Introverted, Intuitive, Thinking, and Judging personalitytraits. These thoughtful tacticians love perfecting the details of life, applying creativity and rationality to everything they do. Their inner world is often a private, complex one.');
-            $('#mbti-image').attr('src', 'img/chipmunk.jpg');
+            if ($('#MBTI-type option:selected').text() == "INTJ - Architect") {
+                $('#mbti-type').text('INTJ');
+                $('#mbti-title').text('The Logician');
+                $('#mbti-subtitle').text('Imaginative and strategic thinker, with a plan for everything.');
+                $('#mbti-content').text('An Architect (INTJ) is a person with the Introverted, Intuitive, Thinking, and Judging personalitytraits. These thoughtful tacticians love perfecting the details of life, applying creativity and rationality to everything they do. Their inner world is often a private, complex one.');
+                $('#mbti-image').attr('src', '../img/MBTI/INTJ.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "INTP - Logician") {
+                $('#mbti-type').text('INTP');
+                $('#mbti-title').text('The Logician');
+                $('#mbti-subtitle').text('Innovative inventor with unquenchable thirst for knowledge.');
+                $('#mbti-content').text('A Logician (INTP) is someone with the Introverted, Intuitive, Thinking, and Prospecting personality traits. These flexible thinkers enjoy taking an unconventional approach to many aspects of life. They often seek out unlikely paths, mixing willingness to experiment with personal creativity.');
+                $('#mbti-image').attr('src', '../img/MBTI/INTP.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "ENTJ - Commander") {
+                $('#mbti-type').text('ENTJ');
+                $('#mbti-title').text('The Commander');
+                $('#mbti-subtitle').text('Bold, imaginative, and strong willed leader.');
+                $('#mbti-content').text('A Commander (ENTJ) is someone with the Extraverted, Intuitive, Thinking, and Judging personality traits. They are decisive people who love momentum and accomplishment. They gather information to construct their creative visions but rarely hesitate for long before acting on them.');
+                $('#mbti-image').attr('src', '../img/MBTI/ENTJ.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "ENTP - Debater") {
+                $('#mbti-type').text('ENTP');
+                $('#mbti-title').text('The Debater');
+                $('#mbti-subtitle').text('Smart & curious thinker who can not resist an intellectual challenge.');
+                $('#mbti-content').text('A Debater (ENTP) is a person with the Extraverted, Intuitive, Thinking, and Prospecting personality traits. They tend to be bold and creative, deconstructing and rebuilding ideas with great mental agility. They pursue their goals vigorously despite any resistance they might encounter.');
+                $('#mbti-image').attr('src', '../img/MBTI/ENTP.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "INFJ - Advocate") {
+                $('#mbti-type').text('INFJ');
+                $('#mbti-title').text('The Advocate');
+                $('#mbti-subtitle').text('Quiet & mystical, yet very inspiring and tireless idealist.');
+                $('#mbti-content').text('An Advocate (INFJ) is someone with the Introverted, Intuitive, Feeling, and Judging personality traits. They tend to approach life with deep thoughtfulness and imagination. Their inner vision, personal values, and a quiet, principled version of humanism guide them in all things.');
+                $('#mbti-image').attr('src', '../img/MBTI/INFJ.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "INFP - Mediator") {
+                $('#mbti-type').text('INFP');
+                $('#mbti-title').text('The Mediator');
+                $('#mbti-subtitle').text('Poetic, kind and altruistic people, always eager to help a good cause.');
+                $('#mbti-content').text('A Mediator (INFP) is someone who possesses the Introverted, Intuitive, Feeling, and Prospecting personality traits. These rare personality types tend to be quiet, open-minded, and imaginative, and they apply a caring and creative approach to everything they do.');
+                $('#mbti-image').attr('src', '../img/MBTI/INFP.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "ENFJ - Protagonist") {
+                $('#mbti-type').text('ENFJ');
+                $('#mbti-title').text('The Protagonist');
+                $('#mbti-subtitle').text('Charismatic & inspiring leaders, able to mesmerize their listeners.');
+                $('#mbti-content').text('A Protagonist (ENFJ) is a person with the Extraverted, Intuitive, Feeling, and Judging personality traits. These warm, forthright types love helping others, and they tend to have strong ideas and values. They back their perspective with the creative energy to achieve their goals.');
+                $('#mbti-image').attr('src', '../img/MBTI/ENFJ.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "ENFP - Campaigner") {
+                $('#mbti-type').text('ENFP');
+                $('#mbti-title').text('The Campaigner');
+                $('#mbti-subtitle').text('Enthuastic, creative and sociable free spirits who can always find a reason to smile.');
+                $('#mbti-content').text('A Campaigner (ENFP) is someone with the Extraverted, Intuitive, Feeling, and Prospecting personality traits. These people tend to embrace big ideas and actions that reflect their sense of hope and goodwill toward others. Their vibrant energy can flow in many directions.');
+                $('#mbti-image').attr('src', '../img/MBTI/ENFP.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "ISTJ - Logistician") {
+                $('#mbti-type').text('ISTJ');
+                $('#mbti-title').text('The Logistician');
+                $('#mbti-subtitle').text('Practican & fact-minded individual, whose realibility can not be doubted.');
+                $('#mbti-content').text('A Logistician (ISTJ) is someone with the Introverted, Observant, Thinking, and Judging personality traits. These people tend to be reserved yet willful, with a rational outlook on life. They compose their actions carefully and carry them out with methodical purpose.');
+                $('#mbti-image').attr('src', '../img/MBTI/ISTJ.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "ISFJ - Defender") {
+                $('#mbti-type').text('ISFJ');
+                $('#mbti-title').text('The Defender');
+                $('#mbti-subtitle').text('Very dedicated and warm protectors, always ready to defend their loved ones.');
+                $('#mbti-content').text('A Defender (ISFJ) is someone with the Introverted, Observant, Feeling, and Judging personality traits. These people tend to be warm and unassuming in their own steady way. They’re efficient and responsible, giving careful attention to practical details in their daily lives.');
+                $('#mbti-image').attr('src', '../img/MBTI/ISFJ.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "ESTJ - Executive") {
+                $('#mbti-type').text('ESTJ');
+                $('#mbti-title').text('The Executive');
+                $('#mbti-subtitle').text('Excellent administrators - unsurpassed in managing things or people.');
+                $('#mbti-content').text('An Executive (ESTJ) is someone with the Extraverted, Observant, Thinking, and Judging personality traits. They possess great fortitude, emphatically following their own sensible judgment. They often serve as a stabilizing force among others, able to offer solid direction amid adversity.');
+                $('#mbti-image').attr('src', '../img/MBTI/ESTJ.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "ESFJ - Consul") {
+                $('#mbti-type').text('ESFJ');
+                $('#mbti-title').text('The Consul');
+                $('#mbti-subtitle').text('Extraordinarily caring, social & popular people, always eager to help.');
+                $('#mbti-content').text('A Consul (ESFJ) is a person with the Extraverted, Observant, Feeling, and Judging personality traits. They are attentive and people-focused, and they enjoy taking part in their social community. Their achievements are guided by decisive values, and they willingly offer guidance to others.');
+                $('#mbti-image').attr('src', '../img/MBTI/ESFJ.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "ISTP - Virtuoso") {
+                $('#mbti-type').text('ISTP');
+                $('#mbti-title').text('The Virtuoso');
+                $('#mbti-subtitle').text('Bold and practical experimenters, master of all kind of tools.');
+                $('#mbti-content').text('A Virtuoso (ISTP) is someone with the Introverted, Observant, Thinking, and Prospecting personality traits. They tend to have an individualistic mindset, pursuing goals without needing much external connection. They engage in life with inquisitiveness and personal skill, varying their approach as needed.');
+                $('#mbti-image').attr('src', '../img/MBTI/ISTP.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "ISFP - Adventurer") {
+                $('#mbti-type').text('ISFP');
+                $('#mbti-title').text('The Adventurer');
+                $('#mbti-subtitle').text('Flexible & charming artists, always ready to explore & experience something new.');
+                $('#mbti-content').text('An Adventurer (ISFP) is a person with the Introverted, Observant, Feeling, and Prospecting personality traits. They tend to have open minds, approaching life, new experiences, and people with grounded warmth. Their ability to stay in the moment helps them uncover exciting potentials.');
+                $('#mbti-image').attr('src', '../img/MBTI/ISFP.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "ESTP - Entrepreneur") {
+                $('#mbti-type').text('ESTP');
+                $('#mbti-title').text('The Entrepreneur');
+                $('#mbti-subtitle').text('Smart, energetive and very perceptive people, who truly enjoy living on the edge.');
+                $('#mbti-content').text('An Entrepreneur (ESTP) is someone with the Extraverted, Observant, Thinking, and Prospecting personality traits. They tend to be energetic and action-oriented, deftly navigating whatever is in front of them. They love uncovering life’s opportunities, whether socializing with others or in more personal pursuits.');
+                $('#mbti-image').attr('src', '../img/MBTI/ESTP.png');
+            }
+            else if ($('#MBTI-type option:selected').text() == "ESFP - Entertainer") {
+                $('#mbti-type').text('ESFP');
+                $('#mbti-title').text('The Entertainer');
+                $('#mbti-subtitle').text('Spontaneous, energetic and enthuastic people - life is never boring around them.');
+                $('#mbti-content').text('An Entertainer (ESFP) is a person with the Extraverted, Observant, Feeling, and Prospecting personality traits. These people love vibrant experiences, engaging in life eagerly and taking pleasure in discovering the unknown. They can be very social, often encouraging others into shared activities.');
+                $('#mbti-image').attr('src', '../img/MBTI/ESFP.png');
+            }
         }
-        else if ($('#MBTI-type option:selected').text() == "INTP - Logician") {
-            $('#mbti-type').text('INTP');
-            $('#mbti-title').text('The Logician');
-            $('#mbti-subtitle').text('Innovative inventor with unquenchable thirst for knowledge.');
-            $('#mbti-content').text('A Logician (INTP) is someone with the Introverted, Intuitive, Thinking, and Prospecting personality traits. These flexible thinkers enjoy taking an unconventional approach to many aspects of life. They often seek out unlikely paths, mixing willingness to experiment with personal creativity.');
-            $('#mbti-image').attr('src', 'img/people.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "ENTJ - Commander") {
-            $('#mbti-type').text('ENTJ');
-            $('#mbti-title').text('The Commander');
-            $('#mbti-subtitle').text('Bold, imaginative, and strong willed leader.');
-            $('#mbti-content').text('A Commander (ENTJ) is someone with the Extraverted, Intuitive, Thinking, and Judging personality traits. They are decisive people who love momentum and accomplishment. They gather information to construct their creative visions but rarely hesitate for long before acting on them.');
-            $('#mbti-image').attr('src', 'img/forecourt.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "ENTP - Debater") {
-            $('#mbti-type').text('ENTP');
-            $('#mbti-title').text('The Debater');
-            $('#mbti-subtitle').text('Smart & curious thinker who can not resist an intellectual challenge.');
-            $('#mbti-content').text('A Debater (ENTP) is a person with the Extraverted, Intuitive, Thinking, and Prospecting personality traits. They tend to be bold and creative, deconstructing and rebuilding ideas with great mental agility. They pursue their goals vigorously despite any resistance they might encounter.');
-            $('#mbti-image').attr('src', 'img/Askyline.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "INFJ - Advocate") {
-            $('#mbti-type').text('INFJ');
-            $('#mbti-title').text('The Advocate');
-            $('#mbti-subtitle').text('Quiet & mystical, yet very inspiring and tireless idealist.');
-            $('#mbti-content').text('An Advocate (INFJ) is someone with the Introverted, Intuitive, Feeling, and Judging personality traits. They tend to approach life with deep thoughtfulness and imagination. Their inner vision, personal values, and a quiet, principled version of humanism guide them in all things.');
-            $('#mbti-image').attr('src', 'img/chipmunk.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "INFP - Mediator") {
-            $('#mbti-type').text('INFP');
-            $('#mbti-title').text('The Mediator');
-            $('#mbti-subtitle').text('Poetic, kind and altruistic people, always eager to help a good cause.');
-            $('#mbti-content').text('A Mediator (INFP) is someone who possesses the Introverted, Intuitive, Feeling, and Prospecting personality traits. These rare personality types tend to be quiet, open-minded, and imaginative, and they apply a caring and creative approach to everything they do.');
-            $('#mbti-image').attr('src', 'img/people.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "ENFJ - Protagonist") {
-            $('#mbti-type').text('ENFJ');
-            $('#mbti-title').text('The Protagonist');
-            $('#mbti-subtitle').text('Charismatic & inspiring leaders, able to mesmerize their listeners.');
-            $('#mbti-content').text('A Protagonist (ENFJ) is a person with the Extraverted, Intuitive, Feeling, and Judging personality traits. These warm, forthright types love helping others, and they tend to have strong ideas and values. They back their perspective with the creative energy to achieve their goals.');
-            $('#mbti-image').attr('src', 'img/forecourt.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "ENFP - Campaigner") {
-            $('#mbti-type').text('ENFP');
-            $('#mbti-title').text('The Campaigner');
-            $('#mbti-subtitle').text('Enthuastic, creative and sociable free spirits who can always find a reason to smile.');
-            $('#mbti-content').text('A Campaigner (ENFP) is someone with the Extraverted, Intuitive, Feeling, and Prospecting personality traits. These people tend to embrace big ideas and actions that reflect their sense of hope and goodwill toward others. Their vibrant energy can flow in many directions.');
-            $('#mbti-image').attr('src','img/Askyline.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "ISTJ - Logistician") {
-            $('#mbti-type').text('ISTJ');
-            $('#mbti-title').text('The Logistician');
-            $('#mbti-subtitle').text('Practican & fact-minded individual, whose realibility can not be doubted.');
-            $('#mbti-content').text('A Logistician (ISTJ) is someone with the Introverted, Observant, Thinking, and Judging personality traits. These people tend to be reserved yet willful, with a rational outlook on life. They compose their actions carefully and carry them out with methodical purpose.');
-            $('#mbti-image').attr('src', 'img/chipmunk.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "ISFJ - Defender") {
-            $('#mbti-type').text('ISFJ');
-            $('#mbti-title').text('The Defender');
-            $('#mbti-subtitle').text('Very dedicated and warm protectors, always ready to defend their loved ones.');
-            $('#mbti-content').text('A Defender (ISFJ) is someone with the Introverted, Observant, Feeling, and Judging personality traits. These people tend to be warm and unassuming in their own steady way. They’re efficient and responsible, giving careful attention to practical details in their daily lives.');
-            $('#mbti-image').attr('src', 'img/people.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "ESTJ - Executive") {
-            $('#mbti-type').text('ESTJ');
-            $('#mbti-title').text('The Executive');
-            $('#mbti-subtitle').text('Excellent administrators - unsurpassed in managing things or people.');
-            $('#mbti-content').text('An Executive (ESTJ) is someone with the Extraverted, Observant, Thinking, and Judging personality traits. They possess great fortitude, emphatically following their own sensible judgment. They often serve as a stabilizing force among others, able to offer solid direction amid adversity.');
-            $('#mbti-image').attr('src', 'img/forecourt.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "ESFJ - Consul") {
-            $('#mbti-type').text('ESFJ');
-            $('#mbti-title').text('The Consul');
-            $('#mbti-subtitle').text('Extraordinarily caring, social & popular people, always eager to help.');
-            $('#mbti-content').text('A Consul (ESFJ) is a person with the Extraverted, Observant, Feeling, and Judging personality traits. They are attentive and people-focused, and they enjoy taking part in their social community. Their achievements are guided by decisive values, and they willingly offer guidance to others.');
-            $('#mbti-image').attr('src', 'img/Askyline.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "ISTP - Virtuoso") {
-            $('#mbti-type').text('ISTP');
-            $('#mbti-title').text('The Virtuoso');
-            $('#mbti-subtitle').text('Bold and practical experimenters, master of all kind of tools.');
-            $('#mbti-content').text('A Virtuoso (ISTP) is someone with the Introverted, Observant, Thinking, and Prospecting personality traits. They tend to have an individualistic mindset, pursuing goals without needing much external connection. They engage in life with inquisitiveness and personal skill, varying their approach as needed.');
-            $('#mbti-image').attr('src', 'img/chipmunk.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "ISFP - Adventurer") {
-            $('#mbti-type').text('ISFP');
-            $('#mbti-title').text('The Adventurer');
-            $('#mbti-subtitle').text('Flexible & charming artists, always ready to explore & experience something new.');
-            $('#mbti-content').text('An Adventurer (ISFP) is a person with the Introverted, Observant, Feeling, and Prospecting personality traits. They tend to have open minds, approaching life, new experiences, and people with grounded warmth. Their ability to stay in the moment helps them uncover exciting potentials.');
-            $('#mbti-image').attr('src', 'img/people.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "ESTP - Entrepreneur") {
-            $('#mbti-type').text('ESTP');
-            $('#mbti-title').text('The Entrepreneur');
-            $('#mbti-subtitle').text('Smart, energetive and very perceptive people, who truly enjoy living on the edge.');
-            $('#mbti-content').text('An Entrepreneur (ESTP) is someone with the Extraverted, Observant, Thinking, and Prospecting personality traits. They tend to be energetic and action-oriented, deftly navigating whatever is in front of them. They love uncovering life’s opportunities, whether socializing with others or in more personal pursuits.');
-            $('#mbti-image').attr('src', 'img/forecourt.jpg');
-        }
-        else if ($('#MBTI-type option:selected').text() == "ESFP - Entertainer") {
-            $('#mbti-type').text('ESFP');
-            $('#mbti-title').text('The Entertainer');
-            $('#mbti-subtitle').text('Spontaneous, energetic and enthuastic people - life is never boring around them.');
-            $('#mbti-content').text('An Entertainer (ESFP) is a person with the Extraverted, Observant, Feeling, and Prospecting personality traits. These people love vibrant experiences, engaging in life eagerly and taking pleasure in discovering the unknown. They can be very social, often encouraging others into shared activities.');
-            $('#mbti-image').attr('src', 'img/Askyline.jpg');
-        }
-    }
 </script>
 
 =======
