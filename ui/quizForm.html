@@ -6,7 +6,7 @@ The total score will be calculated within the 'quizForm' using SQL query.
 A scoreBand will be assigned for the user by the SQL query.
  -->
 =======
- <div class="row gradient-banner" style="margin-top: -16px;">
+ <div class="row gradient-banner" style="margin-top: -32px;">
     <div class="one-column">
       <h2>“To grow yourself, you must know yourself.” <br> — <label class="pink-text">John C. Maxwell</label></h2>
     </div>
@@ -377,7 +377,7 @@ A scoreBand will be assigned for the user by the SQL query.
   });
 
   function onSliderValChange(currentslider) {
-    alert ("!");
+    // alert ("!");
     var id = "#" + currentslider.id;
     var val = $(currentslider).val() / 10;
     $(id).css('background-image',
