@@ -230,9 +230,10 @@ HTML contains the navigation bar at the top and the footer.
       // })
 >>>>>>> refs/remotes/origin/main
 
+      // Header
       const elm = document.querySelector('ul');
       const elActive = elm.querySelector('.active');
-      Header
+      
       $("#navbar-home").click(function () {
          const elActive = elm.querySelector('.active');
          elActive.removeAttribute('class');
@@ -283,40 +284,31 @@ HTML contains the navigation bar at the top and the footer.
       });
 
       $("#footer-about").click(function () {
+         alert("DSHAJDKA");
          const elActive = elm.querySelector('.active');
          elActive.removeAttribute('class');
          $("#navbar-about").addClass("active");
       });
 
       // Check Header
-      var path = window.location.pathname;
-      var page = path.split("/").pop();
-      alert(page);
-
-      if((page=="quiz")||(page=="quizForm.html")) {
-         $("#navbar-quiz").addClass("active");
-<<<<<<< HEAD
-=======
-      }
-      else if((page=="collection")||(page=="artView.html")) {
-         $("#navbar-collection").addClass("active");
-      }
-      else if((page=="aboutUs")||(page=="aboutUs.html")){
-         $("#navbar-about").addClass("active");
-      }
-      else if ((page=="")||("home.html")){
-         $("#navbar-home").addClass("active");
->>>>>>> refs/remotes/origin/main
-      }
-      else if((page=="collection")||(page=="artView.html")) {
-         $("#navbar-collection").addClass("active");
-      }
-      else if((page=="aboutUs")||(page=="aboutUs.html")){
-         $("#navbar-about").addClass("active");
-      }
-      else if ((page=="")||("home.html")){
-         $("#navbar-home").addClass("active");
-      }
+      // A $( document ).ready() block.
+      $(document).ready(function () {
+         var path = window.location.pathname;
+         var page = path.split("/").pop();
+         alert(page);
+         if ((page == "quiz") || (page == "quizForm.html")) {
+            $("#navbar-quiz").addClass("active");
+         }
+         else if ((page == "collection") || (page == "artView.html")) {
+            $("#navbar-collection").addClass("active");
+         }
+         else if ((page == "aboutUs") || (page == "aboutUs.html")) {
+            $("#navbar-about").addClass("active");
+         }
+         else if ((page == "") || ("home.html")) {
+            $("#navbar-home").addClass("active");
+         }
+      });
 
    </script>
 
