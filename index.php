@@ -70,7 +70,17 @@ $f3->route('POST /quizForm',
         $controller->putIntoDatabase($formdata);
 
         // Total score of the survey is calculated automatically by SQL query at 'quizForm'.
+        /* SQL query for totalScore = ALTER TABLE `quizData` ADD `totalScore` INT(48)
+        AS (`ratingQ1` + `ratingQ2` + `ratingQ3`) NOT NULL AFTER `ratingQ3`;*/
+
         // A score rank will be assigned by SQl query to the user.
+        /* SQL query for scoreBand = ALTER TABLE `quizData` ADD `scoreBand` VARCHAR(48) AS (CASE
+            WHEN totalScore BETWEEN 0 AND 25 THEN 'D'
+            WHEN totalScore BETWEEN 26 AND 50 THEN 'C'
+            WHEN totalScore BETWEEN 51 AND 75 THEN 'B'
+            WHEN totalScore BETWEEN 76 AND 100 THEN 'A' ELSE 'NA' END) NOT NULL AFTER `totalScore`;*/
+
+        // SQL query is used to simplify the code written at index.php and allow a clearer mapping.
 
         // Retrieve the scoreBand of the user from 'quizForm' of database
         $userData = $controller->getUserTableFromStr($formdata["name"]);

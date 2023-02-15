@@ -4,6 +4,10 @@
 /* ====== NAVBAR SECTION ======= */
 /* ============================= */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Montserrat Alternates";
@@ -143,7 +147,7 @@ body {
 
 
 /* ============================= */
-/* ======= HOME SECTION ======== */
+/* ====== CONTENT SECTION ====== */
 /* ============================= */
 
 /* COLUMN */
@@ -174,6 +178,7 @@ body {
 
 .two-column.left {
     padding-left: 10%;
+    padding-right: 50px;
 }
 
 .two-column.right {
@@ -188,7 +193,79 @@ body {
     padding-bottom: 5%;
 }
 
+.four-column {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.three-row {
+    /* float: top; */
+    vertical-align: middle;
+    height: 33.3%;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.four-column-25 {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.four-column-75 {
+    float: left;
+    width: 75%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.collection-div {
+    width: 100%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.collection-div:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ourteam-div {
+    width: 100%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 0px;
+}
+
+.ourteam-div:after {
     content: "";
     display: table;
     clear: both;
@@ -218,10 +295,9 @@ h2 {
 }
 
 h3 {
-    font-size: 32px;
-    color: #FF8A9F;
-    font-weight: 300;
-    margin-top: 20px;
+    font-size: 20px;
+    color: #4d4d4d;
+    font-weight: 600;
 }
 
 h4 {
@@ -276,6 +352,28 @@ p {
     width: 35px;
 }
 
+.img-icon-medium {
+    width: 80px;
+}
+
+.img-icon-big {
+    width: 120px;
+}
+
+.collection-image {
+    width:100%;
+    min-height:150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.ourteam-image {
+    width:100%;
+    min-height:200px;
+    height: 200px;
+    object-fit: cover;
+}
+
 /* BUTTON */
 /* Reference : https://codepen.io/pirrera/pen/bqVeGx */
 .button-style-1 {
@@ -305,6 +403,87 @@ p {
     /* change the direction of the change here */
     text-decoration: none;
     color: #FF8A9F;
+}
+
+.button-style-2 {
+    /* flex: 1 1 auto; */
+    margin-top: 10px;
+    display: inline-block;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #f2f2f2;
+    font-family: 'Aldrich';
+    text-transform: uppercase;
+    font-size: 14px;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+    /* box-shadow: 0 0 10px #f2f2f2; */
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient(to right, #FF8A9F 0%, #393939 100%);
+}
+
+.button-style-2:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+.button-style-3 {
+    /* flex: 1 1 auto; */
+    margin-top: 10px;
+    display: inline-block;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #f2f2f2;
+    font-family: 'Aldrich';
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 30px;
+    border: 1px solid #4d4d4d;
+    background:transparent;
+}
+
+.button-style-3:hover {
+    text-decoration: none;
+    color: #FF8A9F;
+    border: 1px solid #FF8A9F;
+}
+
+.button-style-4 {
+    /* flex: 1 1 auto; */
+    margin-top: 10px;
+    display: inline-block;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #f2f2f2;
+    font-family: 'Aldrich';
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient(to right, #4d4d4d 0%, #393939 51%, #232323 100%);
+}
+
+.button-style-4:hover {
+    position: right center;
+    text-decoration: none;
+    color: #f2f2f2;
 }
 
 /* FORM */
@@ -363,14 +542,14 @@ select {
     background-color: #FF8A9F;
 }
 
+#textbox-search {
+    margin-right: 10px;
+}
+
 /* RADIO BUTTON */
 /* Reference : https://stackoverflow.com/questions/16242980/making-radio-buttons-look-like-buttons-instead */
 .questionnaire-radio {
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> refs/remotes/origin/main
 }
 
 .questionnaire-radio-ul {
@@ -436,24 +615,15 @@ Source : https://www.w3schools.com/howto/howto_js_rangeslider.asp */
     border-radius: 5px;
     /* background-image: linear-gradient(to right, #232323 0%, #4d4d4d 51%, #232323 100%); */
     background-image: -webkit-gradient(
-<<<<<<< HEAD
             linear,
             left top,
             right top,
             color-stop(0.5, #FF8A9F),
             color-stop(0.5, #393939));
-=======
-        linear,
-        left top,
-        right top,
-        color-stop(0.5, #FF8A9F),
-        color-stop(0.5, #393939));
->>>>>>> refs/remotes/origin/main
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
-<<<<<<< HEAD
 }
 
 .slider:hover {
@@ -461,15 +631,6 @@ Source : https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 }
 
 .slider::-webkit-slider-thumb {
-=======
-  }
-  
-  .slider:hover {
-    opacity: 1;
-  }
-  
-  .slider::-webkit-slider-thumb {
->>>>>>> refs/remotes/origin/main
     -webkit-appearance: none !important;
     appearance: none;
     width: 25px;
@@ -477,25 +638,15 @@ Source : https://www.w3schools.com/howto/howto_js_rangeslider.asp */
     border-radius: 50%;
     background-image: linear-gradient(to left, #FF8A9F 0%, #A9848A 100%);
     cursor: pointer;
-<<<<<<< HEAD
 }
 
 .slider::-moz-range-thumb {
-=======
-  }
-  
-  .slider::-moz-range-thumb {
->>>>>>> refs/remotes/origin/main
     width: 25px;
     height: 25px;
     border-radius: 50%;
     background: #FF8A9F;
     cursor: pointer;
-<<<<<<< HEAD
 }
-=======
-  }
->>>>>>> refs/remotes/origin/main
 
 .slider::-moz-range-progress {
     background: red;
@@ -578,6 +729,54 @@ Source : https://www.w3schools.com/howto/howto_js_rangeslider.asp */
         padding-right: 10px;
     }
 
+    .ourteam-div .three-column {
+        float: none;
+        width: 100%;
+        height: 250px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 50px;
+    }
+
+    .collection-div {
+        width: 100%;
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .four-column {
+        float: top;
+        width: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .four-column-25 {
+        float: left;
+        width: 30%;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .four-column-75 {
+        float: left;
+        width: 70%;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     /* ETC */
     #museum-logo {
         width: 70%;
@@ -592,7 +791,7 @@ Source : https://www.w3schools.com/howto/howto_js_rangeslider.asp */
     }
 
     h3 {
-        font-size: 32px;
+        font-size: 20px;
     }
 
     h4 {
@@ -617,15 +816,57 @@ Source : https://www.w3schools.com/howto/howto_js_rangeslider.asp */
         /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
         /* box-shadow: 0 0 10px #f2f2f2; */
         border-radius: 30px;
-        background-image: linear-gradient(to right, #4d4d4d 0%, #393939 51%, #232323 100%);
     }
+
+    .button-style-2 {
+        margin-top: 10px;
+        padding-bottom: 15px;
+        padding-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+        font-size: 16px;
+        /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+        /* box-shadow: 0 0 10px #f2f2f2; */
+        border-radius: 30px;
+    }
+
+    .button-style-3 {
+        margin-top: 10px;
+        padding-bottom: 15px;
+        padding-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+        font-size: 16px;
+        /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+        /* box-shadow: 0 0 10px #f2f2f2; */
+        border-radius: 30px;
+    }
+
+    .button-style-4 {
+        margin-top: 10px;
+        padding-bottom: 15px;
+        padding-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+        font-size: 16px;
+        /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+        /* box-shadow: 0 0 10px #f2f2f2; */
+        border-radius: 30px;
+    }
+
+    #textbox-search {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        object-position: center;
+    }
+
+    /* #select-search {
+        width: 100px;
+        margin-right: 15%;
+    } */
+
 }
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> refs/remotes/origin/main
