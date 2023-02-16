@@ -7,7 +7,7 @@ A scoreBand will be assigned for the user by the SQL query.
 <<<<<<< HEAD
 =======
 =======
- <div class="row gradient-banner" style="margin-top: -32px;">
+ <div class="row gradient-banner" style="margin-top: -40px;">
     <div class="one-column">
       <h2>“To grow yourself, you must know yourself.” <br> — <label class="pink-text">John C. Maxwell</label></h2>
     </div>
@@ -28,8 +28,8 @@ A scoreBand will be assigned for the user by the SQL query.
   <!-- MBTI SECTION -->
   <div class="row">
     <div class="two-column left">
-      <img src="img/chipmunk.jpg"
-           style="width:100%; margin-top: auto; margin-bottom: auto; vertical-align: baseline;">
+      <img src="../img/MBTI/INTJ.png" id="mbti-image"
+          style="width:100%; margin-top: auto; margin-bottom: auto; vertical-align: baseline;">
     </div>
     <div class="two-column right" style="padding-left: 3%;">
       <h2>How much you know about <br><label class="pink-text">yourself</label> ?</h2>
@@ -37,7 +37,7 @@ A scoreBand will be assigned for the user by the SQL query.
 
       <input name="name" type="text" placeholder="Your name" class="textbox" id="name" size="50" />
       <h4>Your MBTI type is:</h4>
-      <select id="MBTI" name="MBTI">
+      <select id="MBTI-type" name="MBTI" onchange="mbtichange()">
         <option value="INTJ" selected="selected">INTJ - Architect</option>
         <option value="INTP">INTP - Logician</option>
         <option value="ENTJ">ENTJ - Commander</option>
@@ -344,6 +344,57 @@ A scoreBand will be assigned for the user by the SQL query.
     );
     // alert ($(this).val());
   }
+ 
+ function mbtichange() {
+      if ($('#MBTI-type option:selected').text() == "INTJ - Architect") {
+        $('#mbti-image').attr('src', '../img/MBTI/INTJ.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "INTP - Logician") {
+        $('#mbti-image').attr('src', '../img/MBTI/INTP.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "ENTJ - Commander") {
+        $('#mbti-image').attr('src', '../img/MBTI/ENTJ.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "ENTP - Debater") {
+        $('#mbti-image').attr('src', '../img/MBTI/ENTP.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "INFJ - Advocate") {
+        $('#mbti-image').attr('src', '../img/MBTI/INFJ.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "INFP - Mediator") {
+        $('#mbti-image').attr('src', '../img/MBTI/INFP.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "ENFJ - Protagonist") {
+        $('#mbti-image').attr('src', '../img/MBTI/ENFJ.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "ENFP - Campaigner") {
+        $('#mbti-image').attr('src', '../img/MBTI/ENFP.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "ISTJ - Logistician") {
+        $('#mbti-image').attr('src', '../img/MBTI/ISTJ.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "ISFJ - Defender") {
+        $('#mbti-image').attr('src', '../img/MBTI/ISFJ.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "ESTJ - Executive") {
+        $('#mbti-image').attr('src', '../img/MBTI/ESTJ.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "ESFJ - Consul") {
+        $('#mbti-image').attr('src', '../img/MBTI/ESFJ.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "ISTP - Virtuoso") {
+        $('#mbti-image').attr('src', '../img/MBTI/ISTP.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "ISFP - Adventurer") {
+        $('#mbti-image').attr('src', '../img/MBTI/ISFP.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "ESTP - Entrepreneur") {
+        $('#mbti-image').attr('src', '../img/MBTI/ESTP.png');
+      }
+      else if ($('#MBTI-type option:selected').text() == "ESFP - Entertainer") {
+        $('#mbti-image').attr('src', '../img/MBTI/ESFP.png');
+      }
+    }
 </script>
 
 </body>
