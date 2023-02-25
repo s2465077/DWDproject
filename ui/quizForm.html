@@ -5,6 +5,7 @@ The total score will be calculated within the 'quizForm' using SQL query.
 A scoreBand will be assigned for the user by the SQL query.
  -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
  <div class="row gradient-banner" style="margin-top: -40px;">
@@ -13,11 +14,20 @@ A scoreBand will be assigned for the user by the SQL query.
     </div>
   </div>
 >>>>>>> refs/remotes/origin/main
+=======
+
+<!--
+An input form for the survey related to art therapy.
+Each question has a score, which will be stored at 'quizForm' in database.
+The total score will be calculated within the 'quizForm' using SQL query.
+A scoreBand will be assigned for the user by the SQL query.
+ -->
+>>>>>>> 557859c (commit for submission)
 
 
 <body>
 
-<div class="row gradient-banner" style="margin-top: -32px;">
+<div class="row gradient-banner" style="margin-top: -40px;">
   <div class="one-column">
     <h2>“To grow yourself, you must know yourself.” <br> — <label class="pink-text">John C. Maxwell</label></h2>
   </div>
@@ -28,8 +38,13 @@ A scoreBand will be assigned for the user by the SQL query.
   <!-- MBTI SECTION -->
   <div class="row">
     <div class="two-column left">
+<<<<<<< HEAD
       <img src="../img/MBTI/INTJ.png" id="mbti-image"
           style="width:100%; margin-top: auto; margin-bottom: auto; vertical-align: baseline;">
+=======
+      <img src="img/MBTI/INTJ.png" id="mbti-image"
+           style="width:100%; margin-top: auto; margin-bottom: auto; vertical-align: baseline;">
+>>>>>>> 557859c (commit for submission)
     </div>
     <div class="two-column right" style="padding-left: 3%;">
       <h2>How much you know about <br><label class="pink-text">yourself</label> ?</h2>
@@ -318,29 +333,26 @@ A scoreBand will be assigned for the user by the SQL query.
 </form>
 
 <script>
-  $('input[type="range"]').change(function () {
-    var val = $(this).val() / 10;
-    $(this).css('background-image',
+    $('input[type="range"]').change(function () {
+        var val = $(this).val() / 10;
+        $(this).css('background-image',
             '-webkit-gradient(linear, left top, right top, '
             + 'color-stop(' + val + ', #FF8A9F), '
             + 'color-stop(' + val + ', #393939)'
             + ')'
-    );
-  });
+        );
+    });
 
-  function onSliderValChange(currentslider) {
-<<<<<<< HEAD
-    //alert ("!");
-=======
-    // alert ("!");
->>>>>>> refs/remotes/origin/main
-    var id = "#" + currentslider.id;
-    var val = $(currentslider).val() / 10;
-    $(id).css('background-image',
+    function onSliderValChange(currentslider) {
+        //alert ("!");
+        var id = "#" + currentslider.id;
+        var val = $(currentslider).val() / 10;
+        $(id).css('background-image',
             '-webkit-gradient(linear, left top, right top, '
             + 'color-stop(' + val + ', #FF8A9F), '
             + 'color-stop(' + val + ', #393939)'
             + ')'
+<<<<<<< HEAD
     );
     // alert ($(this).val());
   }
@@ -395,7 +407,63 @@ A scoreBand will be assigned for the user by the SQL query.
         $('#mbti-image').attr('src', '../img/MBTI/ESFP.png');
       }
     }
+=======
+        );
+        // alert ($(this).val());
+    }
+
+    function mbtichange() {
+        if ($('#MBTI-type option:selected').text() == "INTJ - Architect") {
+            $('#mbti-image').attr('src', '../img/MBTI/INTJ.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "INTP - Logician") {
+            $('#mbti-image').attr('src', '../img/MBTI/INTP.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "ENTJ - Commander") {
+            $('#mbti-image').attr('src', '../img/MBTI/ENTJ.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "ENTP - Debater") {
+            $('#mbti-image').attr('src', '../img/MBTI/ENTP.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "INFJ - Advocate") {
+            $('#mbti-image').attr('src', '../img/MBTI/INFJ.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "INFP - Mediator") {
+            $('#mbti-image').attr('src', '../img/MBTI/INFP.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "ENFJ - Protagonist") {
+            $('#mbti-image').attr('src', '../img/MBTI/ENFJ.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "ENFP - Campaigner") {
+            $('#mbti-image').attr('src', '../img/MBTI/ENFP.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "ISTJ - Logistician") {
+            $('#mbti-image').attr('src', '../img/MBTI/ISTJ.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "ISFJ - Defender") {
+            $('#mbti-image').attr('src', '../img/MBTI/ISFJ.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "ESTJ - Executive") {
+            $('#mbti-image').attr('src', '../img/MBTI/ESTJ.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "ESFJ - Consul") {
+            $('#mbti-image').attr('src', '../img/MBTI/ESFJ.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "ISTP - Virtuoso") {
+            $('#mbti-image').attr('src', '../img/MBTI/ISTP.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "ISFP - Adventurer") {
+            $('#mbti-image').attr('src', '../img/MBTI/ISFP.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "ESTP - Entrepreneur") {
+            $('#mbti-image').attr('src', '../img/MBTI/ESTP.png');
+        }
+        else if ($('#MBTI-type option:selected').text() == "ESFP - Entertainer") {
+            $('#mbti-image').attr('src', '../img/MBTI/ESFP.png');
+        }
+    }
+
+>>>>>>> 557859c (commit for submission)
 </script>
 
 </body>
-
